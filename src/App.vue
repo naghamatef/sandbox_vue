@@ -1,27 +1,19 @@
 <template>
   <v-app>
-    <router-view />
+    <mainlayout />
+    <v-main>
+      <router-view />
+    </v-main>
   </v-app>
 </template>
+<script>
+export default {
+  components: {
+    mainlayout: () => import("./layouts/default"),
+  },
 
-<style lang="scss">
-$some-variable: red;
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  --h3-color: $some-variable;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>

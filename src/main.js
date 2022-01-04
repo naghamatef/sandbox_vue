@@ -8,6 +8,16 @@ import Vuetify from "vuetify";
 
 Vue.use(Vuetify);
 
+const opts = {
+  theme: {
+    themes: {}
+  },
+  icons: {
+    iconfont: "mdi"
+  }
+};
+
+export default new Vuetify(opts);
 Vue.config.productionTip = false;
 
 new Vue({
